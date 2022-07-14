@@ -9,7 +9,6 @@ _test
 _out
 .idea
 .history
-.vscode
 
 # Architecture specific extensions/prefixes
 *.[568vq]
