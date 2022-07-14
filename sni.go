@@ -69,7 +69,7 @@ func main() {
 
 	usage()
 	showConfig()
-	time.Sleep(5 * time.Second)
+	time.Sleep(3 * time.Second)
 
 	createFile()
 
@@ -101,7 +101,7 @@ func main() {
 		if status == "true" {
 			fmt.Println("所有IP已扫描，5秒钟后将执行重新扫描。")
 			for i := 1; i < 6; i++ {
-				time.Sleep(time.Millisecond * 1000)
+				time.Sleep(time.Second)
 				fmt.Print("\r", i, "s")
 			}
 			err := os.Truncate(sniNoFileName, 0)
