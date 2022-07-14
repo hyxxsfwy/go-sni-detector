@@ -4,6 +4,7 @@
 ============
 
 ## 说明
+
 用于扫描SNI服务器，sniip_ok.txt中的延迟值为配置中指定的各server_name的延迟的平均值。
 
 由于在初始化时读取了所有ip以便执行去重操作，所以会消耗大量的内存，对于需要扫描大量ip且机器性能不够强大的用户，请将`soft_mode`置为`true`。
@@ -17,10 +18,13 @@
 5. 127.0.0.-127.0.1.
 
 ## 下载地址
+
 [Latest release](https://github.com/johnsonz/go-sni-detector/releases)
 
 ## 高级用法
+
 支持命令，优先级高于配置文件，通过指定`-r`命令可以直接将指定的参数写入到配置文件。
+
 ```
 Usage: go-sni-detector [COMMAND] [VARS]
 
@@ -42,6 +46,7 @@ SUPPORT VARS:
 ```
 
 ## 配置说明
+
 `"concurrency":1000` 并发线程数，可根据自己的硬件配置调整
 
 `"delay":1200` 扫描完成后，提取所有小于等于该延迟的ip
@@ -51,10 +56,13 @@ SUPPORT VARS:
 `"soft_mode"` 边读取ip边扫描，适合需要扫描大量ip且内存较小的用户
 
 ## Windows 平台
+
 针对Windows平台出了浏览器模式，目前功能正在完善中。项目使用了websocket，参见[Web Sockets浏览器兼容一览表](http://caniuse.mojijs.com/Home/Html/item/key/websockets/index.html)判断浏览器是否兼容websocket。
 
 ## Wiki
+
 [Wiki](https://plumwine.me/go-sni-detector-usage-wiki/)
 
 ## 其它工具
+
 扫描google ip工具：[go-checkiptools](https://github.com/johnsonz/go-checkiptools)
