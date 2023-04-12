@@ -1,6 +1,5 @@
 # go-sni-detector
 
-[![Build Status](https://travis-ci.org/johnsonz/go-sni-detector.svg?branch=master)](https://travis-ci.org/johnsonz/go-sni-detector) [![GPLv3 License](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://github.com/johnsonz/go-sni-detector/blob/master/LICENSE)
 ============
 
 ## 说明
@@ -17,9 +16,11 @@
 4. 127.0.0.0-127.0.0.
 5. 127.0.0.-127.0.1.
 
-## 下载地址
-
-[Latest release](https://github.com/johnsonz/go-sni-detector/releases)
+## 快速使用
+```
+wget https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone
+screen ./go-sni-detector_linux_amd64.bin --softmode --snifile cn-aggregated.zone --outputfile scan-result-gapi.txt --concurrency 50 --timeout 2000 --servername www.googleapis.com
+```
 
 ## 高级用法
 
