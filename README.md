@@ -4,11 +4,11 @@
 
 ## 说明
 
-用于扫描SNI服务器，sniip_ok.txt中的延迟值为配置中指定的各server_name的延迟的平均值。
+用于扫描 SNI 服务器，sniip_ok.txt 中的延迟值为配置中指定的各 server_name 的延迟的平均值。
 
-由于在初始化时读取了所有ip以便执行去重操作，所以会消耗大量的内存，对于需要扫描大量ip且机器性能不够强大的用户，请将`soft_mode`置为`true`。
+由于在初始化时读取了所有 ip 以便执行去重操作，所以会消耗大量的内存，对于需要扫描大量ip且机器性能不够强大的用户，请将`soft_mode`置为`true`。
 
-请将待测试的ip段放到sniip.txt文件，支持以下ip格式：
+请将待测试的 ip 段放到 sniip.txt 文件，支持以下ip格式：
 
 1. 127.0.0.1
 2. 127.0.0.0/24
@@ -55,14 +55,6 @@ SUPPORT VARS:
 `"server_name"` 用于测试SNI服务器的域名，以逗号分隔
 
 `"soft_mode"` 边读取ip边扫描，适合需要扫描大量ip且内存较小的用户
-
-## Windows 平台
-
-针对Windows平台出了浏览器模式，目前功能正在完善中。项目使用了websocket，参见[Web Sockets浏览器兼容一览表](http://caniuse.mojijs.com/Home/Html/item/key/websockets/index.html)判断浏览器是否兼容websocket。
-
-## Wiki
-
-[Wiki](https://plumwine.me/go-sni-detector-usage-wiki/)
 
 ## 其它工具
 
