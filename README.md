@@ -57,7 +57,7 @@ SUPPORT VARS:
 `"soft_mode"` 边读取ip边扫描，适合需要扫描大量ip且内存较小的用户
 
 ## 更新证书
-`curl -O https://curl.se/ca/cacert.pem`
+`curl -J -O https://curl.se/ca/cacert.pem`
 
 ## 其它工具
 
