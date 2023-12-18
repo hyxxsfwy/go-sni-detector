@@ -18,8 +18,17 @@
 
 ## 快速使用
 ```
+cd ./bin/ip_ranges
 wget https://www.ipdeny.com/ipblocks/data/aggregated/cn-aggregated.zone
-screen ./go-sni-detector_linux_amd64.bin --softmode --snifile cn-aggregated.zone --outputfile scan-result-gapi.txt --concurrency 50 --timeout 2000 --servername www.googleapis.com
+cd ..
+screen -S go-sni-detector ./go-sni-detector_linux_amd64.bin --softmode --snifile ./ip_ranges/cn-aggregated.zone --outputfile scan-result-gapi.txt --concurrency 50 --timeout 2000 --servername www.googleapis.com
+```
+
+```
+cd ./bin/ip_ranges
+wget https://www.ipdeny.com/ipblocks/data/aggregated/fr-aggregated.zone
+cd ..
+screen -S go-sni-detector ./go-sni-detector_linux_amd64.bin --softmode --snifile ./ip_ranges/fr-aggregated.zone --outputfile scan-result-fr.txt --concurrency 50 --timeout 2000 --servername www.bing.com,scholar.google.com
 ```
 
 ## 高级用法
